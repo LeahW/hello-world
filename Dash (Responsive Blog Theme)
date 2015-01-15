@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<head>
+  <link href="/normalize.css" rel="stylesheet">
+  <style>
+    header {
+      text-align: center;
+      background: url('https://lh6.googleusercontent.com/-AjXUeYFANjY/VLfi2vwYezI/AAAAAAAAAj4/i14h3u3LIu4/w845-h563-no/RaspberryPiinhand.jpg');
+      background-size: 580px;
+      color: white;
+    }
+    a {
+      color: white;
+    }
+    h1 {
+      font-size: 70px;
+    }
+    img {
+      margin: 40px 0px 0px 0px;
+      max-width: 150px;
+      border: 7px solid white;
+      border-radius: 20px;
+    }
+    ul {
+      padding: 10px;
+      background: rgba(0,0,0,0.5);
+    }
+    li {
+      display: inline;
+      padding: 0px 10px 0px 10px;
+    }
+    article {
+      max-width: 500px;
+      padding: 20px;
+      margin: 0 auto;
+    }
+    button {
+      color: rgba(100,50,200,1);
+      margin: 0 250;
+    }
+    @media (max-width: 500px) {
+      h1 {
+        font-size: 36px;
+        padding: 5px;
+      }
+      li {
+        padding: 5px;
+        display: block;
+      }
+    }
+  </style>
+  <title>Leah's Responsive Website!)</title>
+</head>
+<body>
+  <header>
+    <img src="https://scontent-a-atl.xx.fbcdn.net/hphotos-xaf1/v/t1.0-9/10383551_10154683463390389_6513599773007453042_n.jpg?oh=73b0cbd9b057061fb2076895c216a43b&oe=55266521">
+    <h1>Leah's Responsive Website</h1>
+    <ul>
+      <li><a href="#">About Me</a></li>
+      <li><a href="#">Raspberry Pi</a></li>
+      <li><a href="#">Robomow Modifications</a></li>
+    </ul>
+  </header>
+  <article>
+  <button>Click Me!</button>
+  </article>
+  <script>
+    $("button").on("click", function() {
+      alert("Clicked!");
+    });
+  </script>
+</body>
