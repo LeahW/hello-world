@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<head>
+  <title>LeahW</title>
+  <style>
+    body {
+      text-align: center;
+      background: url("http://lh6.googleusercontent.com/-7AC_oOW4B6o/VFN60IG8UZI/AAAAAAAAAb0/Y8S3MflK2Po/w560-h747-no/10628353_842521729115939_6360247810987118428_n.jpg");
+      background-size: 400px 400px;
+      color: white;
+      font-family: helvetica;
+    }
+    p {
+      font-size: 22px;
+    }
+    input {
+      border: 0;
+      padding: 10px;
+      font-size: 18px;
+    }
+    input[type="submit"] {
+      background: green;
+      color: white;
+    }
+    
+  </style>
+</head>
+<body>
+  <img src="http://pbs.twimg.com/profile_images/479771787308183553/SoAW4ul7_400x400.jpeg">
+  <p>Hi! I'm Leah, an ATL-based magician. Say hello!</p>
+  <input type="email" placeholder="Your email">
+  <input type="submit">
+</body>
