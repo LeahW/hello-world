@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<head>
+<script src="/assets/jquery.js"></script>
+<link href='https://fonts.googleapis.com/css?family=Annie+Use+Your+Telescope' rel='stylesheet' type='text/css'>
+<style>
+body {
+  font-family: helvetica, sans-serif;
+  margin: 0 auto;
+  max-width: 600px;
+  background: #232323;
+}
+div {
+  height: 200px;
+  background-size: cover;
+  position: relative;
+  margin: 40px 0 0 0;
+  border-radius: 12px;
+}
+h1 {
+  font-family: 'Annie Use Your Telescope';
+  text-align: center;
+  font-size: 75px;
+  color: #aaaaaa;
+  margin: 60px 0 0 0;
+}
+h2 {
+  text-align: center;
+  color: #bbbbbb;
+  margin: 0px 0 70px 0;
+}
+p {
+  color: rgba(255,255,255,1);
+  background: black;
+  background: linear-gradient(bottom, rgba(0,0,0,1), rgba(0,0,0,.4));
+  background: -webkit-linear-gradient(bottom, rgba(0,0,0,1), rgba(0,0,0,.4));
+  background: -moz-linear-gradient(bottom, rgba(0,0,0,1), rgba(0,0,0,.4));
+  padding: 10px;
+  line-height: 28px;
+  text-align: justify;
+  position: absolute;
+  bottom: 0;
+  margin: 0;
+  height: 30px;
+  transition: height .5s;
+  -webkit-transition: height .5s;
+  -moz-transition: height .5s;
+}
+
+small {
+  opacity: 0;
+}
+
+.show-description p {
+  height: 150px;
+}
+
+.show-description small {
+  opacity: 1;
+}
+
+.html{
+  background-image: url("https://lh3.googleusercontent.com/-ulVhp_lt9Ko/VLh5a7WsT1I/AAAAAAAAAnI/S2Nmiupf9sU/w529-h86-no/html.jpg");
+}
+.css{
+  background-image: url("https://lh5.googleusercontent.com/-CAa_NxXH8mY/VLh5cDbyRCI/AAAAAAAAAnU/CxUQhU4Gqsc/w349-h98-no/css.jpg");
+}
+.javascript{
+  background-image: url("https://lh5.googleusercontent.com/-yj4-K9oBpq0/VLh5axcD-iI/AAAAAAAAAnM/5rI5nibhWKc/w404-h72-no/javascript.jpg");
+}
+.desc {
+  float: right;
+}
+@media (max-width: 500px) {
+  h1 {
+    font-size: 50px;
+    margin-top: 20px;
+    line-height: 40px;
+  }
+  h2 {
+    font-size: 20px;
+    margin: 20px 0 30px 0;
+  }
+  div {
+    margin: 20px 12px 0 12px;
+  }
+  p {
+    font-size: 20px;
+    line-height: 24px;
+  }
+  small {
+    font-size: 16px;
+  }
+}
+
+</style>
+
+</head>
+
+<body>
+<h1>Hello World!</h1>
+<h2>a coding journey</h2>
+<div class="html">
+  <p>HTML <span class="desc">HyperText Markup Language</span><br />
+  <small>The standard markup language for building webpages. Used to create and define content.</small></p>
+</div>
+
+<div class="css">
+  <p>CSS <span class="desc">Cascading Style Sheets</span><br />
+  <small>A style sheet language for defining the look and formatting of webpages.</small></p>
+</div>
+  
+<div class="javascript">
+  <p>JS <span class="desc">JavaScript</span><br />
+  <small>A dynamic programming language that allows you to create client-side scripts for webpages.</small></p>
+</div>
+
+<script>
+  $('div').on('click', function() {
+      $(this).toggleClass('show-description');
+  });
+</script>
+
+</body>
