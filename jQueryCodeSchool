@@ -34,4 +34,10 @@ $('#filters').on('click', 'onsale-filter', function() {
   $('.vacation').filter('.onsale').addClass('highlighted');
   });                                                          // Removes highlighted class wherever present; selects only onsale vacations and adds highlighted class
   
+  // Listening for DOM Events
   
+  $('li').length;                                                      // Queries the DOM element and returns how many nodes
+  
+  $('.confirmation').on('click', 'button', function() {
+   $(this).closest('.confirmation').find('.ticket').slideDown();
+  });                                                                   // Listens for click on confirmation class button; finds ticket class for this confirmation and slides down to show ticket ul 
