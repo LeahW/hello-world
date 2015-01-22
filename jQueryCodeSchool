@@ -34,7 +34,7 @@ $('#filters').on('click', 'onsale-filter', function() {
   $('.vacation').filter('.onsale').addClass('highlighted');
   });                                                          // Removes highlighted class wherever present; selects only onsale vacations and adds highlighted class
   
-  // Listening for DOM Events
+// Listening for DOM Events
   
   $('li').length;                                                      // Queries the DOM element and returns how many nodes
   
