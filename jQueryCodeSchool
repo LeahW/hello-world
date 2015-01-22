@@ -38,6 +38,10 @@ $('#filters').on('click', 'onsale-filter', function() {
   
   $('li').length;                                                      // Queries the DOM element and returns how many nodes
   
+  $(document).ready(function() {
+    alert($('img').length);
+  });                                                                 // Alerts how many nodoes for the element after DOM loads
+  
   $('.confirmation').on('click', 'button', function() {
    $(this).closest('.confirmation').find('.ticket').slideDown();
   });                                                                   // Listens for click on confirmation class button; finds ticket class for this confirmation and slides down to show ticket ul 
