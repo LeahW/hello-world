@@ -44,4 +44,13 @@ $('#filters').on('click', 'onsale-filter', function() {
   
   $('.confirmation').on('click', 'button', function() {
    $(this).closest('.confirmation').find('.ticket').slideDown();
-  });                                                                   // Listens for click on confirmation class button; finds ticket class for this confirmation and slides down to show ticket ul 
+  });                                                                         // Listens for click on confirmation class button; finds ticket class for this confirmation and slides down to show ticket ul 
+
+function showTicket () {                                                // Define a function and  . . . 
+$(this).closest('confirmation').find('.ticket').slideDown();
+}                                                                       
+$(document).ready(function() {                                          // . . . verify elements are loaded and . . .
+  $('.confirmation').on('click', 'button', showTicket);                 //. . . perform showTicket function if Confirmation class button is clicked . . .
+  $('.confirmation').on('mouseenter', 'h3', showTicket);                // . . . if the mouse enters into a Confirmation class h3 text field
+});
+
