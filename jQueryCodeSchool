@@ -11,4 +11,15 @@ $('li').last().prev();                            // walking the DOM to get the 
 $('li').first().parent();                        // return parent item of the first li 
 $('#destinations').children('li');              // return only immediate descendants of destinations id, usin traversal method
 
-// 
+// Manipulating the DOM
+
+$(document).ready(function() {                               // run script only when document is ready
+var price = $('<p>From $399.99</p>');                       // create price variable from html element
+$('.vacation').append(price);                              // add price node to the DOM at the end of vacation class
+$('.vacation').prepend(price);                            // add price node to the DOM at the beginning of vacation class
+$('.vacation').after(price);                             // add price node to the DOM after vacation class
+$('.vacation').before(price);                           // add price node to the DOM before vacation class
+$('button').remove();                                  // remove button
+$(this).closest('.vacation').append(price);           // a better way to add price node if there are multiple vacation items
+$(this).remove();                                    // a better way to remove just the most recently clicked button
+
