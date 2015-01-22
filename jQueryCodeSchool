@@ -1,4 +1,11 @@
-// Traversing the DOM examples
+// Intro to jQuery examples
+
+<script src = "jquery.min.js"</script>                        // load jQuery into HTML
+<script src = "application.js"></script>                     // use jQuery from saved file
+$('h1').text();                                             // return the text of an HTML element
+$('.articles, #container').text();                         // return text of multiple items
+
+// Traversing the DOM
 
 $('.promo, #france');                                    // selects everything within .promo class with id of 'france'
 $('#destinations > li');                                // selects only immediate li descendants of destinations id
