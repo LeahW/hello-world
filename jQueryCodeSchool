@@ -1,0 +1,14 @@
+// Traversing the DOM examples
+
+$('.promo, #france');                                    // selects everything within .promo class with id of 'france'
+$('#destinations > li');                                // selects only immediate li descendants of destinations id
+$('#destinations li:first');                           // pseudoselector method for selecting first li in destinations id
+$('#destinations').find('li');                        // traversal method for selecting li within destinations id
+$('li').last();                                      // find last li by traversal
+$('li').first();                                    // find first li by traversal
+$('li').first().next();                            // walking the DOM to get the second li value
+$('li').last().prev();                            // walking the DOM to get the second-to-last value
+$('li').first().parent();                        // return parent item of the first li 
+$('#destinations').children('li');              // return only immediate descendants of destinations id, usin traversal method
+
+// 
