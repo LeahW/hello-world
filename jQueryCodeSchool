@@ -77,3 +77,9 @@ $(document).ready(function() {
     $(this).val('7');
   });
 });
+
+$(document).ready(function() {
+  $(".see-photos").on("click", function() {
+    $(this).closest('.tour').find('.photos').slideToggle();                 // When you click See Photos element, photos belonging to closest tour in list slideToggle display on screen
+  });
+});
