@@ -83,3 +83,16 @@ $(document).ready(function() {
     $(this).closest('.tour').find('.photos').slideToggle();                 // When you click See Photos element, photos belonging to closest tour in list slideToggle display on screen
   });
 });
+
+$(".see-photos").on("click", function(event) {                              // Prevent another event handler from being called
+    event.stopPropagation();
+});
+
+$(document).ready(function() {
+  $('.vacation').on('click', 'expand', function(event) {
+    event.preventDefault();
+    $(this).closest('.vacation').find ('.comments').fadeToggle();           // Expand vacation element to show comments upon clicking, while preventing default browser jump
+    });
+  });
+    
+    
