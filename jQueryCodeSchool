@@ -65,3 +65,15 @@ $('.vacation').on('keyup', '.quantity', function() {                    // Liste
   var price = +$(this).closest('.vacation').data('price');              // . . . and assigns closest vacation data price element to a new price variable as an integer . . .
   var quantity = +$(this).val();                                        // . . . and assigns keyed in quantity as integer quantity variable
 });
+
+$(document).ready(function() {
+  $("#nights").on("keyup", function() {
+    var nights = +$(this).val();
+    var dailyPrice = +$(this).closest(".tour").data("daily-price");               // Creates integers from nights input and price data element, creates total and outputs to nights count element
+    $("#total").text(nights * dailyPrice);
+    $("#nights-count").text($(this).val());
+  });
+  $("#nights").on('focus', function() {                                       // Sets the value of nights count element to 7 when focused upon
+    $(this).val('7');
+  });
+});
