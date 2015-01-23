@@ -122,5 +122,19 @@ $(document).ready(function() {
   });
 });
 
+$(document).ready(function() {
+  $('.tour').on('mouseenter', function() {
+    $(this).addClass('highlight');
+    $(this).find('.per-night').animate({'opacity': '1'});                     // Animate to an opacity of 1 in per night field upon mouseenter
+  });
+  $('.tour').on('mouseleave', function() {
+    $(this).removeClass('highlight');
+  });
+});
+
+$(this).animate({'top': '-10px'}, 'fast');                                    // Jump up 10px quickly
+
+$(this).find(".per-night").animate({"opacity": "1", "top": "-14px"});          // Multiple calls to animate
+
 
     
