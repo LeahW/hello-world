@@ -61,3 +61,7 @@ $(document).ready(function() {                                          // . . .
   $('.confirmation').on('mouseenter', 'h3', showTicket);                // . . . if the mouse enters into a Confirmation class h3 text field
 });
 
+$('.vacation').on('keyup', '.quantity', function() {                    // Listens for finished input in vacation class quantity field . . .
+  var price = +$(this).closest('.vacation').data('price');              // . . . and assigns closest vacation data price element to a new price variable as an integer . . .
+  var quantity = +$(this).val();                                        // . . . and assigns keyed in quantity as integer quantity variable
+});
