@@ -91,7 +91,7 @@ $(".see-photos").on("click", function(event) {                              // P
 $(document).ready(function() {
   $('.vacation').on('click', 'expand', function(event) {
     event.preventDefault();
-    $(this).closest('.vacation').find ('.comments').fadeToggle();           // Expand vacation element to show comments upon clicking, while preventing default browser jump
+    $(this).closest('.vacation').find ('.comments').fadeToggle();           // Expand vacation element to show comments upon clicking, while preventing default browser jump. Uses fadeToggle, fadeIn and fadeOut also available
     });
   });
   
