@@ -94,5 +94,33 @@ $(document).ready(function() {
     $(this).closest('.vacation').find ('.comments').fadeToggle();           // Expand vacation element to show comments upon clicking, while preventing default browser jump
     });
   });
-    
+  
+  // Styling
+  
+  $(document).ready(function() {
+  $(".tour").on("mouseenter", function() {                                  // Changes background color in css upon mouseenter
+    $(this).css('background-color', '#252b30');
+  });
+});
+
+$(document).ready(function() {
+  $(".tour").on("mouseenter", function() {                                  // Changes both background color and font-weight by passing javaScript object to css method
+    $(this).css({"background-color" : "#252b30",
+    							'font-weight' : 'bold'});
+  });
+});
+
+$(this).find('.photos').show();                                             // Example of show method to display photos (can also use .hide)
+
+$(document).ready(function() {
+  $(".tour").on("mouseenter", function() {
+    $(this).addClass('highlight');
+    $(this).find(".photos").show();
+  });
+  $(".tour").on("mouseleave", function() {                                  // Adding class upon mouseenter, removing class upon mouseleave
+    $(this).removeClass('highlight');
+  });
+});
+
+
     
