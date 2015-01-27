@@ -45,7 +45,7 @@ $('.confirmation').on('click', 'button', function () {
   $.ajax('confirmation.html', {
     success: function(response) { . . . },
     error: function(request, errorType, errorMessage) { . . . },
-    timeout: 3000                                                                       // in milliseconds, i.e. this would be 3 seconds
+    timeout: 3000,                                                                       // in milliseconds, i.e. this would be 3 seconds
     beforeSend: function() {
       $('.confirmation').addClass('is-loading');                                        // add the is loading class in css before Ajax request
     },
