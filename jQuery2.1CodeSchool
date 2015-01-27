@@ -8,9 +8,13 @@ $('.confirmation').on('click', 'button', function() {
   });
 });
 
+
+
 $.get('confirmation.html', function(response) {
   $('.ticket').html(response).slideDown();                      // Alternate $.ajax call using $.get(url, success) that performs same find ticket and retrieve response html as above code
 });
+
+
 
 $.ajax('confirmation.html', {
   success: function(response){
@@ -20,6 +24,8 @@ $.ajax('confirmation.html', {
   }
 });
 
+
+
 $.ajax('confirmation.html', {
   success: function(response){
     $('.ticket').html(response).slideDown();                  // Gets and slides down to show ticket's html response; url is appended with ?confNum and a string pulled from the ticket's data attribute in html (if provided)
@@ -27,6 +33,8 @@ $.ajax('confirmation.html', {
   data: { "confNum": $(".ticket").data("confNum") }
   }
 });
+
+
 
 $(document).ready(function() {
   $("#tour").on("click", "button", function() {
@@ -38,6 +46,8 @@ $(document).ready(function() {
     });
   });
 });
+
+
 
 // Ajax Options
 
@@ -55,6 +65,8 @@ $('.confirmation').on('click', 'button', function () {
   });
 });
 
+
+
 $(document).ready(function() {
   var el = $("#tour");
   el.on("click", "button", function() {
@@ -70,7 +82,11 @@ $(document).ready(function() {
   });
 });
 
+
+
 $('.confirmation').on('click', 'view-boarding-pass', function(){ . . . };           // listen for events on boarding pass and check for 'view-boarding-pass' target. Useful if 'view-boarding-pass' isn't created unless/until Ajax runs
+
+
 
 $(document).ready(function() {
   $("#tour").on("click", "button", function() {
@@ -93,12 +109,16 @@ $(document).ready(function() {
   });
 });
 
+
+
 $(document).ready(function() {
   function showPhotos() {
     $(this).find('span').slideToggle();
   }
   $('.photos').on('mouseenter', 'li', showPhotos)
                  .on('mouseleave', 'li', showPhotos);
+
+
 
 
   var el = $("#tour");
