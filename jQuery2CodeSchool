@@ -27,3 +27,48 @@ $.ajax('confirmation.html', {
   data: { "confNum": $(".ticket").data("confNum") }
   }
 });
+
+$(document).ready(function() {
+  $("#tour").on("click", "button", function() {
+    $.ajax('/photos.html', {
+      success: function(response) {                           // Gets and fades in only the current location's photos by appending location data to url
+        $('.photos').html(response).fadeIn();
+      },
+      data: {'location': $('#tour').data('location') }
+    });
+  });
+});
+
+// Ajax Options
+
+$('.confirmation').on('click', 'button', function () {
+  $.ajax('confirmation.html', {
+    success: function(response) { . . . },
+    error: function(request, errorType, errorMessage) { . . . },
+    timeout: 3000                                                                       // in milliseconds, i.e. this would be 3 seconds
+    beforeSend: function() {
+      $('.confirmation').addClass('is-loading');                                        // add the is loading class in css before Ajax request
+    },
+    complete: function() {
+      $('.confirmation).removeClass('is-loading');                                        // remove the is loading class after Ajax runs
+    }
+  });
+});
+
+$(document).ready(function() {
+  var el = $("#tour");
+  el.on("click", "button", function() {
+    $.ajax('/photos.html', {
+      data: {location: el.data('location')},
+      success: function(response) {                                                     // an error callback that will set the contents of the .photos element to a message in an li element letting the traveler know that something went wrong and to try again. You can write whatever you'd like for this message
+        $('.photos').html(response).fadeIn();
+      },
+      error: function(request, errorType, errorMessage) {
+      	$('.photos').html('<li>oops!</li>')
+      }
+    });
+  });
+});
+
+$('.confirmation').on('click', 'view-boarding-pass', function(){ . . . };           // listen for events on boarding pass and check for 'view-boarding-pass' target. Useful if 'view-boarding-pass' isn't created unless/until Ajax runs
+
