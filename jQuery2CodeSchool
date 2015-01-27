@@ -1,0 +1,29 @@
+// Ajax Basics
+
+$('.confirmation').on('click', 'button', function() {
+  $.ajax('confirmation.html', {
+   success: function(response) {                                  // Use an Ajax $.ajax(url[settings]) command to find ticket and load html response, show in a slideDown
+     $('.ticket').html(response).slideDown();
+    }
+  });
+});
+
+$.get('confirmation.html', function(response) {
+  $('.ticket').html(response).slideDown();                      // Alternate $.ajax call using $.get(url, success) that performs same find ticket and retrieve response html as above code
+});
+
+$.ajax('confirmation.html', {
+  success: function(response){
+    $('.ticket').html(response).slideDown();                  // Gets and slides down to show ticket's html response, with url generated taking the format confirmation.html?confNum1234
+  }
+  data: { "confNum": 1234 }
+  }
+});
+
+$.ajax('confirmation.html', {
+  success: function(response){
+    $('.ticket').html(response).slideDown();                  // Gets and slides down to show ticket's html response; url is appended with ?confNum and a string pulled from the ticket's data attribute in html (if provided)
+  }
+  data: { "confNum": $(".ticket").data("confNum") }
+  }
+});
