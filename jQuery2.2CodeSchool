@@ -1,0 +1,66 @@
+
+var tour = {
+  init: function() {
+    $("#tour").on('click', 'button', this.loadTour);
+  },
+  loadTour: function() {
+  $.ajax('/photos.html', {
+  data: {location: $("#tour").data('location')},
+      success: function(response) {
+        $('.photos').html(response).fadeIn();
+      },                                                                                                        // create a new function named init within our tour object. Next, call the init method on the tour object from within the $(document).ready function. Lastly, move the existing code that's run on $(document).ready within level1.js into our new init method. This should be functionally the same, but now our code is moved into the tour object.
+      error: function() {
+        $('.photos').html('<li>There was a problem fetching the latest photos. Please try again.</li>');
+      },
+      timeout: 3000
+  });
+
+	}
+}
+$(document).ready(function() {
+  tour.init();
+});
+
+
+
+
+var tour = {
+  init: function() {
+    $("#tour").on("click", "button", this.fetchPhotos);
+  },
+  fetchPhotos: function() {
+      $.ajax('/photos.html', {
+        data: {location: $("#tour").data('location')},
+        success: function(response) {
+          $('.photos').html(response).fadeIn();
+        },
+        error: function() {
+          $('.photos').html('<li>There was a problem fetching the latest photos. Please try again.</li>');
+        },
+        timeout: 3000,
+        beforeSend: function() {
+          $('#tour').addClass('is-fetching');
+        },														// Takes above code and refactors .ajax call to /photos.html in to a fetchPhotos key on tour object
+        complete: function() {
+          $('#tour').removeClass('is-fetching');
+        }
+      });
+    }
+  }
+
+$(document).ready(function() { 
+  tour.init();
+});
+
+
+
+
+function Tour(price) {
+  console.log("A new Tour was created");
+ this.cost = function(nights) { console.log((nights)*(price))}
+}
+$(document).ready(function() { 							// created a cost function within Tour to write to console the number of nights times price (of 100)
+  var tour = new Tour(100);
+  
+  tour.cost(4);
+});
