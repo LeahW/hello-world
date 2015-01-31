@@ -1,0 +1,5 @@
+// notes
+
+alert("message");     // standard js pop-up
+confirm("message);    // adds a checkbox offering to dismiss further pop-ups
+prompt("message);     // adds checkbox, plus an input field
