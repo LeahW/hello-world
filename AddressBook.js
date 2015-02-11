@@ -40,3 +40,20 @@ var search = function(lastName) {
 
 /*Create a search function
 then call it passing "Jones"*/
+
+
+// Below is the Add Contact function
+
+var add = function(firstName, lastName, email, phoneNumber) {
+    contacts[contacts.length] = {
+    firstName: firstName,
+    lastName: lastName,
+    email: email,
+    phoneNumber: phoneNumber
+};
+}
+
+add('L', 'Boben', 'lbob@example.com', '555-867-5309');
+
+list()
+
