@@ -1,0 +1,10 @@
+// Get Help the Hacker Way: Notes from the #JavaScript IRC
+
+// leahw, what i tell everyone when i'm introducing freenode is
+// 1. stackoverflow/google  your problem first,
+// 2. if you still can't find an answer create a simplified test case in jsfiddle if you can 
+// 3. ask on #javascript with what the problem is, and the various attempts you've made
+// you should let the rest of the class know those simple tricks.. 
+// the simplified test case is the most important... 
+// i.e. you reduce the problem down to the simplist example you can make
+//   crazyhorse18
