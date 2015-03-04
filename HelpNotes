@@ -8,3 +8,12 @@
 // the simplified test case is the most important... 
 // i.e. you reduce the problem down to the simplist example you can make
 //   crazyhorse18
+
+/* Formula for writing a good help request
+     Subject = Object(including version, environment, library, etc) --> deviation
+     
+     In the description, start with premise of what you are trying to accomplish, selected method, simplified test case and a 
+     request for pointer or what is wrong with code. Add thank you for consideration and welcome feedback for more appropriate 
+     method (given xyz perhaps). Also, follow back up with remedy applied, result, and thank yous to those who helped.
+        src: http://catb.org/~esr/faqs/smart-questions.html
+*/
