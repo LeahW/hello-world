@@ -67,3 +67,23 @@
   fixLetterCase(capitals, 0, 0);
 
   console.log(capitals);
+  
+  // Using Recursion to find Multiples
+  
+      var multiples = [];
+
+  function multiplesOf(base, i) {
+    // Base case
+    if (i === 1) {
+        multiples[i-1] = base;
+        console.log(multiples);
+  	// Write the array multiples to the console
+    }
+    // Recursive case
+    else {
+      multiples[i - 1] = base * i;
+      return multiplesOf(base, i-1);
+	  // Add a recursive function call
+    }	
+  }
+  multiplesOf(4, 3);
